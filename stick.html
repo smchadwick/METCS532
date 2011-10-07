@@ -1,0 +1,264 @@
+<!DOCTYPE HTML> 
+<html>
+    <head> 
+  <link rel="stylesheet" href="stickfigure.css" type="text/css">
+    <script src="kinetic2d-v1.0.2.js"></script>
+    <script>
+    
+        window.onload = function() {
+        // instantiate new animation object
+        var anim = new Kinetic_2d("stickFigure");
+ 
+        // set drawStage method
+        anim.setDrawStage(function(){
+            anim.clear();
+            var context = anim.getContext();
+            var canvas = anim.getCanvas();
+            
+            // set Y rotation around origin and scale figure
+            var y =  Math.sin(anim.getTime() / 600) * 2.0;
+            var x =  2.0;
+           
+           
+            // Head     
+            context.beginPath();
+            context.save();
+            context.translate(canvas.width / 2, canvas.height / 2);
+            context.scale(x, y);
+            var radius = 15;
+            context.arc(0, -15, radius, 0, 4 * Math.PI, false);
+            context.restore();
+            context.fillStyle = "blue";
+            context.fill();
+            context.strokeStyle = "yellow";
+            context.stroke();
+           
+           
+            // Body  
+            context.beginPath();
+            context.save();
+            context.translate(canvas.width / 2, canvas.height / 2);
+            context.scale(x, y);
+            context.moveTo(0, 0);
+            context.lineTo(0,45 );
+            context.restore();
+            context.stroke();
+            
+            
+            // Right arm
+            context.beginPath();
+            context.save();
+            context.translate(canvas.width / 2, canvas.height / 2);
+            context.scale(x, y);
+            context.moveTo(0, 0);
+            context.lineTo(35,10 );
+            context.restore();
+            context.stroke();
+        
+            
+            // Right hand
+            context.beginPath();
+            context.save();
+            context.translate(canvas.width / 2, canvas.height / 2);
+            context.scale(x, y);
+            context.moveTo(35, 10);
+            context.lineTo(35, -10 );  
+            context.restore();
+            context.stroke();
+            
+            
+            // Left arm
+            context.beginPath();
+            context.save();
+            context.translate(canvas.width / 2, canvas.height / 2);
+            context.scale(x, y);
+            context.moveTo(0, 0);
+            context.lineTo(-35,10 );
+            context.restore();
+            context.stroke();
+           
+           
+            // Left hand
+            context.beginPath();
+            context.save();
+            context.translate(canvas.width / 2, canvas.height / 2);
+            context.scale(x, y);
+            context.moveTo(-35, 10);
+            context.lineTo(-35, 30 );
+            context.restore();
+            context.stroke();
+           
+           
+            // Right leg
+            context.beginPath();
+            context.save();
+            context.translate(canvas.width / 2, canvas.height / 2);
+            context.scale(x, y);
+            context.moveTo(0, 45);
+            context.lineTo(15,65 );
+            context.restore();
+            context.stroke();
+           
+            
+            // Right foot
+            context.beginPath();
+            context.save();
+            context.translate(canvas.width / 2, canvas.height / 2);
+            context.scale(x, y);
+            context.moveTo( 15, 65);
+            context.lineTo( 15, 90 );
+            context.restore();
+            context.stroke();
+           
+           
+            // Left leg
+            context.beginPath();
+            context.save();
+            context.translate(canvas.width / 2, canvas.height / 2);
+            context.scale(x, y);
+            context.moveTo(0, 45);
+            context.lineTo(-15,65 );
+            context.restore();
+            context.stroke();
+           
+           
+            // Left foot
+            context.beginPath();
+            context.save();
+            context.translate(canvas.width / 2, canvas.height / 2);
+            context.scale(x, y);
+            context.moveTo(-15, 65);
+            context.lineTo(-15, 90 );
+            context.restore();
+            context.stroke();
+            
+            
+            // set X counter clockwise rotation around origin and scale figure
+            var x = -1 * Math.sin(anim.getTime() / 600) *  2.0;
+            var y = 2.0;
+           
+            
+            // Head     
+            context.beginPath();
+            context.save();
+            context.translate(canvas.width / 2, canvas.height / 2);
+            context.scale(x, y);
+            var radius = 15;
+            context.arc(0, -15, radius, 0, 4 * Math.PI, false);
+            context.restore();
+            context.fillStyle = "yellow";
+            context.fill();
+            context.strokeStyle = "blue";
+            context.stroke();
+            
+            
+            // Body  
+            context.beginPath();
+            context.save();
+            context.translate(canvas.width / 2, canvas.height / 2);
+            context.scale(x, y);
+            context.moveTo(0, 0);
+            context.lineTo(0,45 );
+            context.restore();
+            context.stroke();
+            
+            
+            // Right arm
+            context.beginPath();
+            context.save();
+            context.translate(canvas.width / 2, canvas.height / 2);
+            context.scale(x, y);
+            context.moveTo(0, 0);
+            context.lineTo(35,10 );
+            context.restore();
+            context.stroke();
+        
+            
+            // Right hand
+            context.beginPath();
+            context.save();
+            context.translate(canvas.width / 2, canvas.height / 2);
+            context.scale(x, y);
+            context.moveTo(35, 10);
+            context.lineTo(35, -10 );
+            context.restore();
+            context.stroke();
+            
+            
+            // Left arm
+            context.beginPath();
+            context.save();
+            context.translate(canvas.width / 2, canvas.height / 2);
+            context.scale(x, y);
+            context.moveTo(0, 0);
+            context.lineTo(-35,10 );
+            context.restore();
+            context.stroke();
+            
+            
+            // Left hand
+            context.beginPath();
+            context.save();
+            context.translate(canvas.width / 2, canvas.height / 2);
+            context.scale(x, y);
+            context.moveTo(-35, 10);
+            context.lineTo(-35, 30 );
+            context.restore();
+            context.stroke();
+            
+            
+            // Right leg
+            context.beginPath();
+            context.save();
+            context.translate(canvas.width / 2, canvas.height / 2);
+            context.scale(x, y);
+            context.moveTo(0, 45);
+            context.lineTo(15,65 );
+            context.restore();
+            context.stroke();
+           
+            
+            // Right foot
+            context.beginPath();
+            context.save();
+            context.translate(canvas.width / 2, canvas.height / 2);
+            context.scale(x, y);
+            context.moveTo( 15, 65);
+            context.lineTo( 15, 90 );
+            context.restore();
+            context.stroke();
+        
+            
+            // Left leg
+            context.beginPath();
+            context.save();
+            context.translate(canvas.width / 2, canvas.height / 2);
+            context.scale(x, y);
+            context.moveTo(0, 45);
+            context.lineTo(-15,65 );
+            context.restore();
+            context.stroke();
+            
+            
+            // Left foot
+            context.beginPath();
+            context.save();
+            context.translate(canvas.width / 2, canvas.height / 2);
+            context.scale(x, y);
+            context.moveTo(-15, 65);
+            context.lineTo(-15, 90 );
+            context.restore();
+            context.stroke();
+            
+            });
+ 
+         anim.startAnimation();
+                
+            };
+        </script> 
+    </head> 
+    <body onmousedown="return false;"> 
+        <canvas id="stickFigure" width="960" height="640"></canvas> 
+    
+    </body>
+</html>
